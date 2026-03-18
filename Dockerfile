@@ -4,7 +4,7 @@
 FROM node:20-alpine
 
 # Install git (needed to clone) and pm2 globally
-RUN apk add --no-cache git \
+RUN apk add --no-cache git bash \
     && npm install -g pm2
 
 WORKDIR /apps
