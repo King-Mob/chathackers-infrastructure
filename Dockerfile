@@ -35,7 +35,7 @@ RUN cd rainbow-tool && npm run build-web && npm run build
 COPY ecosystem.config.js .
 
 # Expose the ports your apps listen on
-EXPOSE 8135
+EXPOSE 8138
 
 # Start all processes via pm2 in foreground mode
 # (pm2-runtime keeps pm2 as PID 1, which is correct for Docker)
