@@ -4,7 +4,7 @@
 FROM node:22-slim
 
 # Install git (needed to clone) and pm2 globally
-RUN apt-get update && apt-get install -y --no-install-recommends git bash \
+RUN apt-get update && apt-get install -y --no-install-recommends git bash ca-certificates \
     && npm install -g pm2 \
     && rm -rf /var/lib/apt/lists/*
 
