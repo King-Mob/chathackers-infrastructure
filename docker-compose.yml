@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./secrets:/registrations:ro
+      - ./secrets:/apps/chathackers-wrapper/registrations:ro
 
     # Container name makes it easier to find in `docker ps`
     container_name: chathackers_uk
