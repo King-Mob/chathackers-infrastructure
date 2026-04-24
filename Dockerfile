@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends git bash ca-cer
 
 WORKDIR /apps
 
+ARG VITE_BASE_URL
+ENV VITE_BASE_URL=$VITE_BASE_URL
+
 # ── Clone your repositories ──────────────────
 # Replace the URLs and folder names to match your repos.
 # For private repos via SSH, see the SSH note at the bottom of this file.
