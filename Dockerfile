@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────
 # Multi-repo Node.js container managed by pm2
 # ─────────────────────────────────────────────
-FROM node:20-alpine
+FROM node:22-slim
 
 # Install git (needed to clone) and pm2 globally
 RUN apk add --no-cache git bash \
