@@ -19,10 +19,10 @@ RUN git clone https://github.com/King-Mob/example-chathackers-module.git example
 RUN git clone https://github.com/King-Mob/rainbows-chathackers-tool.git rainbow-tool
 
 # ── Install dependencies for each repo ───────
-RUN cd chathackers-wrapper && npm ci && npm run build-web && npm run build
-RUN cd welcome-tool && npm ci && npm run build-web && npm run build
-RUN cd example-tool && npm ci && npm run build-web && npm run build
-RUN cd rainbow-tool && npm ci && npm run build-web && npm run build
+RUN cd chathackers-wrapper && npm ci
+RUN cd welcome-tool && npm ci
+RUN cd example-tool && npm ci
+RUN cd rainbow-tool && npm ci
 
 # ── Build web and service for each repo ───────
 RUN cd chathackers-wrapper && npm run build-web && npm run build
