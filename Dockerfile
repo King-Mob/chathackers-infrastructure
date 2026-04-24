@@ -4,8 +4,9 @@
 FROM node:22-slim
 
 # Install git (needed to clone) and pm2 globally
-RUN apk add --no-cache git bash \
-    && npm install -g pm2
+RUN apt-get update && apt-get install -y --no-install-recommends git bash \
+    && npm install -g pm2 \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /apps
 
